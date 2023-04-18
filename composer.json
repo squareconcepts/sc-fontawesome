@@ -1,0 +1,32 @@
+{
+    "name": "squareconcepts/sc-fontawesome",
+    "description": "Fontawesome package for square concepts",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Squareconcepts\\ScFontAwesome\\Providers\\ScFontAwesomeServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Squareconcepts\\ScFontAwesome\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Square Concepts",
+            "email": "info@squareconcepts.nl"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.5@dev",
+        "wireui/wireui": "dev-main",
+        "livewire/livewire": "^2.12",
+        "laravel/framework": "10.x-dev",
+        "illuminate/view": "*"
+    }
+}
