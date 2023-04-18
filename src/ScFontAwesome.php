@@ -4,7 +4,7 @@ namespace Squareconcepts\ScFontAwesome;
 
 use Carbon\Carbon;
 use Exception;
-use Http;
+use Illuminate\Support\Facades\Http;
 use Livewire\Wireable;
 
 class ScFontAwesome implements Wireable
