@@ -24,8 +24,8 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "^7.5@dev",
-        "wireui/wireui": "^1",
-        "livewire/livewire": "^2",
-        "laravel/framework": "^8"
+        "wireui/wireui": ">1",
+        "livewire/livewire": "2",
+        "laravel/framework": ">8"
     }
 }
