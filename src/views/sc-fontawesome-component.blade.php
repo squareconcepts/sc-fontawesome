@@ -4,7 +4,7 @@
         option-value="value"
         :options="$styles"
         wire:model="style"
-        class="w-full"
+        class="w-80"
     />
 
     <i class="{{$style}} fa-{{$name}} w-32 !flex justify-center items-center"></i>
