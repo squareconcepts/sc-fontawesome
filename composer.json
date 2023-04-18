@@ -24,9 +24,8 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "^7.5@dev",
-        "wireui/wireui": "dev-main",
-        "livewire/livewire": "^2.12",
-        "laravel/framework": "10.x-dev",
-        "illuminate/view": "*"
+        "wireui/wireui": "*",
+        "livewire/livewire": "^2",
+        "laravel/framework": "^10"
     }
 }
