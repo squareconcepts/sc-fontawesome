@@ -26,6 +26,6 @@
         "guzzlehttp/guzzle": "^7.5@dev",
         "wireui/wireui": "*",
         "livewire/livewire": "^2",
-        "laravel/framework": "^10"
+        "laravel/framework": "^8"
     }
 }
