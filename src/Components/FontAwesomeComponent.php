@@ -25,6 +25,24 @@ class FontAwesomeComponent extends Component
     public function mount()
     {
         $this->service = new ScFontAwesome();
+
+        if (!empty($this->value)) {
+            $values = explode(' ', $this->value);
+
+            if (!empty($values[0])) {
+                $this->style = $values[0];
+            }
+
+            if (!empty($values[1])) {
+                $name = explode('fa-', $values[1]);
+
+                if (!empty($name[1])) {
+                    $this->name = $name[1];
+                } else {
+                    $this->name = $values[1];
+                }
+            }
+        }
     }
 
     public function render()
