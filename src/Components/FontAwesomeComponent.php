@@ -55,6 +55,17 @@ class FontAwesomeComponent extends Component
         $this->emit($this->event, $this->field, $this->value);
     }
 
+    public function updatedStyle()
+    {
+        if (empty($this->style) || empty($this->name)) {
+            $this->value = null;
+        } else {
+            $this->value = $this->style . ' fa-' . $this->name;
+        }
+
+        $this->emitValue();
+    }
+
     public function searchName()
     {
         $data = $this->service->searchIcon($this->name);
@@ -63,7 +74,12 @@ class FontAwesomeComponent extends Component
             $this->icons = $data['data'];
         }
 
-        $this->value = $this->style . ' fa-' . $this->name;
+        if (empty($this->style) || empty($this->name)) {
+            $this->value = null;
+        } else {
+            $this->value = $this->style . ' fa-' . $this->name;
+        }
+
         $this->emitValue();
     }
 }
