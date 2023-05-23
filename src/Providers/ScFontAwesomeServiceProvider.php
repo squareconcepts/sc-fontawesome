@@ -10,6 +10,7 @@ class ScFontAwesomeServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'sc-fontawesome');
         $this->loadViewsFrom(__DIR__ . '/../views', 'sc-fontawesome');
 
         $this->publishes([
@@ -18,6 +19,10 @@ class ScFontAwesomeServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/../views' => resource_path('views/vendor/sc-fontawesome'),
+        ], 'views');
+
+        $this->publishes([
+            __DIR__ . '/../lang' => resource_path('views/vendor/sc-fontawesome'),
         ], 'views');
 
         Livewire::component('sc-fontawesome-component', FontAwesomeComponent::class);

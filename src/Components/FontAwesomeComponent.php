@@ -15,6 +15,8 @@ class FontAwesomeComponent extends Component
     public $value;
     public $event;
 
+    public string $identifier = '';
+
     protected array $rules = [
         'style' => 'nullable',
         'name' => 'nullable',
@@ -52,7 +54,7 @@ class FontAwesomeComponent extends Component
 
     public function emitValue()
     {
-        $this->emit($this->event, $this->field, $this->value);
+        $this->emit($this->event, $this->field, $this->value, $this->identifier);
     }
 
     public function updatedStyle()
@@ -74,12 +76,6 @@ class FontAwesomeComponent extends Component
             $this->icons = $data['data'];
         }
 
-        if (empty($this->style) || empty($this->name)) {
-            $this->value = null;
-        } else {
-            $this->value = $this->style . ' fa-' . $this->name;
-        }
-
-        $this->emitValue();
+        $this->updatedStyle();
     }
 }
